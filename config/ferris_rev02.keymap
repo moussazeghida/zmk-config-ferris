@@ -13,8 +13,7 @@
 #define NUM 2
 #define NAV 3
 #define FUN 4
-#define DAN 5
-#define LCK 6
+#define LCK 5
 
 &caps_word {
    continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -112,24 +111,9 @@
                         bindings = <
    &none &kp F6 &kp F5 &kp F4 &kp F10 &none &none &none &none &none
    &kp CAPS &kp F3   &kp F2 &kp F1 &kp F11 &bt BT_SEL 2 &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &none
-   &mo DAN &kp F9 &kp F8 &kp F7  &kp F12 &bt BT_SEL 0  &bt BT_SEL 1 &kp C_BRI_DN &kp C_BRI_UP &trans
+   &mo LCK &kp F9 &kp F8 &kp F7  &kp F12 &bt BT_SEL 0  &bt BT_SEL 1 &kp C_BRI_DN &kp C_BRI_UP &trans
                          &none &trans &trans &none 
                         >;
-                };
-                danger_layer {
-// -----------------------------------------------------------------
-// |     |     |     |     |     | |BTCLR| BLE | USB |RESET|     |
-// |     |     |     |     |     | |     |     |     |     |BOOTL|
-// |_!!!_|     |     |     |     | |     |     |     |     |_FUN_|
-//                   |     |     | |     |     |
-                    // impactful buttons
-                    // Bluetooth clear, reset, chaning BLE/USB preference, bootloader
-                    bindings = <
-&none &none &none &none &none &bt BT_CLR  &out OUT_BLE &out OUT_USB &reset &none
-&none &none &none &none &none &none &none &none &none &bootloader
-&trans &none &none &none &none &none &none &none &none &trans
-&none &none &none &none
-                    >;
                 };
                 lock_layer {
                     // only way out is the lock combo
